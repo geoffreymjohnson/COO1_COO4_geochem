@@ -15,7 +15,7 @@ text(1669, .025, labels = "South Slough")
 # Plot Haynes inlet core scan xrf proxy
 par(mar = c(2,5,0,5))
 plot(agemodel_coo6$date, coo6_xrf$Ni/coo6_xrf$Ti, xlim = c(1650,2016),ylim = c(0,25),xaxt = 'n',xlab = "", ylab = "HI Ni/Ti", col = "grey40", pch = 16)
-lines(agemodel_coo6$date, predict(coo6_lo_age_ni_ti), lwd = 1, lty = 2)
+lines(agemodel_coo6$date, predict(coo6_scan_lo_age_ni_ti), lwd = 1, lty = 2)
 rect(xleft=1944, xright=1976, ybottom=0, ytop=26, density=100, col=color)
 axis(side = 4)
 text(1669, 20, labels = "Hayne's Inlet")

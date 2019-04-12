@@ -1,5 +1,5 @@
 #count the nuber of records above water (NA) values
-install.packages("stringr")
+#install.packages("stringr")
 #spilt the date/time column
 #add the library with string manipulation functions
 library(stringr)
@@ -100,27 +100,6 @@ DO_below5 <- matrix(unlist(below, recursive = TRUE, use.names = TRUE))
 
 
 years <- matrix(unlist(yrs, recursive = TRUE, use.names = TRUE))
-#plot it
-plot(years, belowX)
 
 
-#try this as a loop with many threshold values (ie 1:7)
-n=7
-titles
-for (i in 1:n) {
-  threshold <- i
-  #create a list to hold output
-  below <- list()
-  #loop through each year and count up the records
-  for (i in yrs[1:16]) {
-    below <- append(below, nrow(subset(DO_date_time, DO <= threshold & year == i)))
-  }  
-  below
-  # turn the lists into data elements
-  belowX <- matrix(unlist(below, recursive = TRUE, use.names = TRUE))
-  for (j in yrs[1:16]) {
-    below <- append(below, nrow(subset(DO_date_time, DO <= threshold & year == i)))
-  }  
-  below
-}
-
+plot(years,DO_below5)

@@ -5,12 +5,20 @@ colors <- c(2,'blue',2,'blue')
 line_type <- c(1,1,2,2)
 ln_wdth <- c(2,2,2,2)
 do_cm <- c(258.5,375,475,180,875.3,2175,392.5,253)
-mid <- ages + widths/2
+dates <- c(1999:2015)
+y_range <- seq(0,1200,75)
+
 
 #blank for the legend
 plot(dates, y_range, type = "n", axes=F, ylab = NA, xlab = NA)
 legend(2002, y=1000, legend = leg, lty=line_type, lwd = ln_wdth, col=colors, title="DO threshold (mg/L)")
 cor_depth <- 8
+
+#Using a desired number of subsections, build the widths for variable width age bars 
+ages <- agemodel_all$date[1:cor_depth]
+ages_minus <- head(ages, -1)
+age_shift <- append(ages_minus, 2014.6, after = 0)
+mid <- ages + widths/2
 
 #Variable width bars for core section age range
 element <- xrf$Ti

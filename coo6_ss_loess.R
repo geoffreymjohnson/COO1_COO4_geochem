@@ -1,0 +1,28 @@
+#lo models for depth axis
+coo6_lo_v <- loess(V ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_ni <- loess(Ni ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_zn_ti <- loess(Zn/Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_cu_ti <- loess(Cu/Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_ni_ti <- loess(Ni/Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_zn <- loess(Zn ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_cu <- loess(Cu ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_ti <- loess(Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_cr <- loess(Cr ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_cr_ti <- loess(Cr/Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_ti <- loess(Ti ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_mn <- loess(Mn ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+coo6_lo_fe <- loess(Fe ~ depth, coo6_ss,model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+
+
+#lo models for age axis
+agecoo6_lo_v <- loess(coo6_ss$V ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_ni <- loess(coo6_ss$Ni ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_zn_ti <- loess(coo6_ss$Zn/coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_cu_ti <- loess(coo6_ss$Cu/coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_ni_ti <- loess(coo6_ss$Ni/coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_zn <- loess(coo6_ss$Zn ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_cu <- loess(coo6_ss$Cu ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_ti <- loess(coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_cr <- loess(coo6_ss$Cr ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_cr_ti <- loess(coo6_ss$Cr/coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)
+agecoo6_lo_ti <- loess(coo6_ss$Ti ~ ages_coo6_ss$y, model = FALSE, degree = 2,parametric = FALSE,family = "gaussian", span=0.25)

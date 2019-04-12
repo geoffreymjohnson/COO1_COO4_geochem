@@ -1,11 +1,11 @@
 #proxy, timber harvest and upwelling
 x <- seq(1985,2015,1)
 y <- seq(0,30,1)
-do <- belowX*0.5
+do <- DO_below5*0.5
 cor_depth=13
 
 #Using a desired number of subsections, build the widths for variable width age bars 
-ages <- agemodel$date[1:cor_depth]
+ages <- agemodel_all$date[1:cor_depth]
 ages_minus <- head(ages, -1)
 age_shift <- append(ages_minus, 2014.6, after = 0)
 
@@ -32,8 +32,8 @@ x_axis <- years + 0.5
 dates <- c(1985:2015)
 y_range <- seq(0,1200,40)
 barplot(rev(heights), rev(widths), space=0, 
-        col = 'indianred3',  ylim = c(0,.025),ylab = "Ni/Ti Ratio", beside = TRUE, xpd = FALSE)
-plot.window(xlim = c(1985, 2015), ylim = c(.15,.25))
+        col = 'indianred3',  ylim = c(0,.035),ylab = "Ni/Ti Ratio", beside = TRUE, xpd = FALSE)
+plot.window(xlim = c(1985, 2015), ylim = c(.15,.025))
 par(new = T)
 par(mar = c(3,5,0,5))
 plot(dates, y_range, type = "n", axes=F, ylab = NA, xlab = "")
@@ -57,7 +57,7 @@ dates <- c(1985:2015)
 #Plotting second panel: Haynes Inlet
 par(mar = c(3,5,0,5))
 barplot(rev(heights), rev(widths), space=0, 
-        col = 'indianred3', ylim = c(0,.025),ylab = "Ni/Ti Ratio", 
+        col = 'indianred3', ylim = c(0,.035),ylab = "Ni/Ti Ratio", 
         beside = TRUE, xpd = FALSE)
 par(new = T)
 plot(dis_stats$date, dis_stats$median, xlim = c(1985, 2015),ylab = "", xlab = "Date", axes = FALSE, pch = 17, cex = 1.4)

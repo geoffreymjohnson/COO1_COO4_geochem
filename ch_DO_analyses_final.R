@@ -1,6 +1,6 @@
 #charleston DO data
 #count the nuber of records above water (NA) values
-install.packages("stringr")
+#install.packages("stringr")
 #spilt the date/time column
 #add the library with string manipulation functions
 library(stringr)
@@ -40,9 +40,7 @@ colnames(CHDOdata_12_16_date_time) <- c("DO", "month", "day", "year")
 #reduced columns
 DO_date_time <- rbind.data.frame(CHDOdata_02_07_date_time, CHDOdata_07_12_date_time, CHDOdata_12_16_date_time)
 
-DO_date_time <- rbind.data.frame(CHDOdata_02_07, CHDOdata_07_12, CHDOdata_12_16)
 
-DO_date_time <- rbind.data.frame(DOdata_99_04, DOdata_04_09, DOdata_09_14)
 
 #now trying to add up the time under some DO threshold
 #set up a list of all years in the dataset

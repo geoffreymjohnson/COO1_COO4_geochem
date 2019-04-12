@@ -1,18 +1,19 @@
 
+install.packages("stringr")
 #setwd("/media/geoffrey/BUG/COO4_R/COO4")
 #setwd("F:/COO4")
 
 #agemodel <- read.csv("COO4_Bindord_0_32.csv")
 # or 
-agemodel <- read.csv("COO4_age.csv")
+#agemodel <- read.csv("COO4_age.csv")
 agemodel_all <- read.csv("coo4_17_ages.csv")
 
 #DO data
 #Valino Island 
-DOdata_94_99 <- read.csv("C:/Users/gmj/Documents/R/COO/COO4/DO/SOSVAWQ.csv")
-DOdata_99_04 <- read.csv("/media/geoffrey/BUG/COO4_R/COO4/DO/99_04.csv", skip=2)
-DOdata_04_09 <- read.csv("/media/geoffrey/BUG/COO4_R/COO4/DO/04_09.csv", skip=2)
-DOdata_09_14 <- read.csv("/media/geoffrey/BUG/COO4_R/COO4/DO/09_14.csv", skip=2)
+
+DOdata_99_04 <- read.csv("DO/99_04.csv", skip=2)
+DOdata_04_09 <- read.csv("DO/04_09.csv", skip=2)
+DOdata_09_14 <- read.csv("DO/09_14.csv", skip=2)
 
 #charleston Bridge
 CHDOdata_02_07 <- read.csv("DO/char02_07.csv", skip=2)
